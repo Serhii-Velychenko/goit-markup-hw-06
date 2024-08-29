@@ -78,6 +78,7 @@ img {
 .header-container {
   display: flex;
   align-items: center;
+  justify-content: space-between; /*додав*/
 }
 
 .nav-header {
@@ -86,9 +87,16 @@ img {
 }
 
 .menu-header {
-  display: flex;
+  display: none; /*додав*/
+  /* display: flex;
   align-items: center;
-  gap: 40px;
+  gap: 40px; */
+}
+
+.address-header {
+  display: none; /*додав*/
+  font-style: normal;
+  /* margin-left: auto; */
 }
 
 .info-header {
@@ -105,8 +113,9 @@ img {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #4d5ae5;
-  margin-right: 76px;
-  padding: 24px 0;
+  /* margin-right: 76px; */
+  /* padding: 24px 0; */
+  padding: 16px 0;
 }
 .logo-span {
   color: #2e2f42;
@@ -158,10 +167,17 @@ img {
   color: #404bbf;
 }
 
-.address-header {
-  font-style: normal;
-  margin-left: auto;
+.header-burger-btn {
+  padding: 0;
+  border: transparent;
+  background-color: transparent;
 }
+
+.header-burger-btn-icon {
+  display: block;
+  fill: #2f2f37;
+}
+
 /* #endregion header */
 
 button {
@@ -258,7 +274,7 @@ button {
   font-size: 36px;
   line-height: 1.11;
   letter-spacing: 0.02em;
-  text-align: center;
+  text-align: center; /* додав */
   color: #2e2f42;
 }
 
@@ -405,11 +421,13 @@ button {
   background-color: #fff;
   /* width: calc((100% - 48px) / 3); */
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08); /*додав*/
 }
-.project-card:hover {
+/* .project-card:hover {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-}
+} */
 
 .project-card:hover .text-section-three {
   transform: translate(0);
@@ -455,12 +473,28 @@ button {
 /* #region footer */
 .footer {
   background-color: #2e2f42;
-  padding-top: 100px;
-  padding-bottom: 100px;
+  /* padding-top: 100px;
+  padding-bottom: 100px; */
+  padding-top: 96px; /*додав*/
+  padding-bottom: 96px; /*додав*/
 }
+
+.footer .container {
+  display: flex;
+  flex-wrap: wrap; /*додав*/
+  align-items: baseline;
+  gap: 72px; /*додав*/
+}
+
+.wrap-footer {
+  /* margin-right: 120px; */
+}
+
 .logo-footer {
+  display: flex; /*додав*/
+  justify-content: center; /*додав*/
   margin-bottom: 16px;
-  display: inline-block;
+  /* display: inline-block; */
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
   font-size: 18px;
@@ -479,11 +513,18 @@ button {
   color: #f4f4fd;
 }
 .descripcion-footer {
-  max-width: 264px;
+  max-width: 288px; /*додав*/
+  /* max-width: 264px; */
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #f4f4fd;
+}
+
+.text-link-footer {
+  display: flex; /*додав*/
+  flex-wrap: wrap; /*додав*/
+  justify-content: center; /*додав*/
 }
 
 .text-footer {
@@ -536,17 +577,11 @@ button {
   fill: #f4f4fd;
 }
 
-.footer .container {
-  display: flex;
-  align-items: baseline;
-}
-
-.wrap-footer {
-  margin-right: 120px;
-}
-
 .footer-cont-subscribe {
-  margin-left: auto;
+  display: flex; /*додав*/
+  flex-wrap: wrap; /*додав*/
+  justify-content: center; /*додав*/
+  /* margin-left: auto; */
 }
 
 .text-footer-cont-subscribe {
@@ -560,9 +595,11 @@ button {
 
 .form-footer {
   display: flex;
+  flex-wrap: wrap; /*додав*/
   justify-content: center;
   align-items: center;
-  gap: 24px;
+  /* gap: 24px; */
+  gap: 16px; /*додав*/
 }
 
 .footer-input {
@@ -574,7 +611,8 @@ button {
   color: #fff;
   border: 1px solid #fff;
   border-radius: 4px;
-  width: 264px;
+  /* width: 264px; */
+  width: 288px; /*додав*/
   height: 40px;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
   background-color: transparent;
@@ -847,15 +885,54 @@ button {
 
 /* #region media */
 
-/* #region section2 */
 @media screen and (min-width: 320px) {
+  /* #region header */
+  /* #endregion header */
+
+  /* #region section2 */
   .section-two .container {
     max-width: 296px;
   }
+  /* #endregion section2 */
 }
-/* #endregion section2 */
 
 @media screen and (min-width: 768px) {
+  /* #region header */
+
+  .menu-header {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .address-header {
+    display: block;
+  }
+
+  .info-header {
+    display: flex; /*додав*/
+    flex-direction: column; /*додав*/
+    gap: 12px; /*додав*/
+  }
+
+  .logo-header {
+    margin-right: 120px;
+    padding: 24px 0;
+  }
+
+  .mail-tel {
+    padding: 0;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+  }
+
+  .header-burger-btn {
+    display: none;
+  }
+
+  /* #endregion header */
+
   /* #region section1 */
 
   .container {
@@ -902,9 +979,62 @@ button {
     width: calc((100% - 48px) / 2);
   }
   /* #endregion section3 */
+
+  /* #region footer */
+
+  .footer .container {
+    max-width: 552px;
+    gap: 72px 24px;
+  }
+
+  .logo-footer {
+    display: block;
+  }
+
+  .descripcion-footer {
+    max-width: 264px;
+  }
+
+  .text-link-footer {
+    display: block;
+  }
+
+  .footer-cont-subscribe {
+    display: block;
+  }
+
+  .form-footer {
+    gap: 24px;
+  }
+
+  .footer-input {
+    width: 264px;
+  }
+
+  /* #endregion footer */
 }
 
 @media screen and (min-width: 1158px) {
+  /* #region header */
+
+  .info-header {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+  }
+
+  .logo-header {
+    margin-right: 76px;
+  }
+
+  .mail-tel {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+  }
+
+  /* #endregion header */
+
   /* #region section1 */
 
   .container {
@@ -985,7 +1115,44 @@ button {
   .project-card {
     width: calc((100% - 48px) / 3);
   }
+
+  .project-card {
+    box-shadow: none;
+  }
+
+  .project-card:hover {
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+      0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  }
+
   /* #endregion section3 */
+
+  /* #region footer */
+
+  .footer {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  .footer .container {
+    max-width: 1158px;
+    flex-wrap: nowrap;
+    gap: 0;
+  }
+
+  .wrap-footer {
+    margin-right: 120px;
+  }
+
+  .logo-footer {
+    display: inline-block;
+  }
+
+  .footer-cont-subscribe {
+    margin-left: auto;
+  }
+
+  /* #endregion footer */
 }
 
 /* #endregion media */
