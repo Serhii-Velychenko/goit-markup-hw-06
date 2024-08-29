@@ -53,11 +53,52 @@
             </li>
           </ul>
         </address>
-        <button class="header-burger-btn" type="button">
+        <button class="header-burger-btn" type="button" data-menu-open>
           <svg class="header-burger-btn-icon" width="24" height="24">
             <use href="./images/icons.svg#icon-heroicons-solid_menu"></use>
           </svg>
         </button>
+      </div>
+      <div class="header-mobile-menu" data-menu>
+        <div class="container mobile-menu-container">
+          <button class="btn-mobile-menu-close" type="button" data-menu-close>
+            close
+          </button>
+          <nav class="nav-mobile-menu-container">
+            <ul class="list-nav-mobile-menu">
+              <li class="item-nav-mobile-menu">
+                <a
+                  class="link-nav-mobile-menu link-studio-mobile-menu"
+                  href="./index.html"
+                  >Studio</a
+                >
+              </li>
+              <li class="item-nav-mobile-menu">
+                <a class="link-nav-mobile-menu" href="">Portfolio</a>
+              </li>
+              <li class="item-nav-mobile-menu">
+                <a class="link-nav-mobile-menu" href="">Contacts</a>
+              </li>
+            </ul>
+          </nav>
+          <address class="address-header-mobile-menu">
+            <ul class="list-address-mobile-menu">
+              <li class="item-address-mobile-menu">
+                <a
+                  class="mail-tel-address-mobile-menu"
+                  href="mailto:info@devstudio.com"
+                  >info@devstudio.com</a
+                >
+              </li>
+              <li class="item-address-mobile-menu">
+                <a class="mail-tel-address-mobile-menu" href="tel:+110001111111"
+                  >+11 (000) 111-11-11</a
+                >
+              </li>
+            </ul>
+          </address>
+          <div></div>
+        </div>
       </div>
     </header>
     <!-- #endregion header -->
@@ -584,5 +625,6 @@
     </div> -->
     <!-- #endregion modal -->
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>
