@@ -1002,12 +1002,11 @@ button {
 
 /* #region media */
 
-@media screen and (min-width: 320px) and (max-width: 767px) {
+@media screen and (max-width: 767px) {
   /* #region header */
 
-  .list-link-footer {
+  .header-list-icon-mobile-menu {
     display: flex;
-    justify-content: center;
     align-items: center;
     gap: 40px;
   }
