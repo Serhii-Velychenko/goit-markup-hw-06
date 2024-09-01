@@ -1157,7 +1157,7 @@ button {
   }
 
   .project-card {
-    width: calc((100% - 48px) / 2);
+    width: calc((100% - 24px) / 2);
   }
   /* #endregion section3 */
 
